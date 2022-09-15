@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  margin: 0;
+  font-size: 1rem;
+  color: #404040;
+  text-align: center;
+}
+
+h1 {
+  font-size: 10;
+  font-weight: 300;
+  color: #fff;
+}
+
+h2 {
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+h1 + p {
+  color: #f18119;
+  font-weight: 900;
+  font-size: 1rem;
+  margin: 0;
+}
+
+h2 + p {
+  color: #f18119;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.top-text {
+  font-size: 0.625rem;
+  margin: 0;
+  padding-top: 2px;
+  font-weight: 900;
+  color: #f18119;
+  text-transform: uppercase;
+  order: -1;
+  border-top: 5px solid #f18119;
+  border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
+}
+
+.fine-print {
+  font-size: 0.625rem;
+  letter-spacing: 1px;
+}
+
+strong {
+  font-weight: 900;
+}
+
+.intro {
+  background-color: #404040;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url(./images/hamburger.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  padding: 0 0.5em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50vh;
+}
+
+.main-content {
+  padding: 2em 1em;
+}
+
+.bottom-text {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.intro > *,
+.main-content > * {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.email-collector {
+  width: 250px;
+  max-width: 300px;
+}
+
+input,
+.btn {
+  width: 100%; /* Bu with 100% sayesinde inputlar düzgün duruyorlar. */
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+input {
+  font-family: inherit;
+  text-align: inherit;
+  padding: 0.25em;
+  border: 1px solid #404040;
+  transition: 250ms ease;
+}
+
+input:focus {
+  transform: scale(1.1);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(to left, #ff713b, #ffa51d);
+  color: white;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  transform: scale(1.1, 1.2);
+  background: linear-gradient(to right, #ff713b, #ffa51d);
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    font-size: 1.125rem;
+    display: flex;
+  }
+  h1 {
+    font-size: 2.3rem;
+  }
+  h2,
+  h1 + p {
+    font-size: 1.2rem;
+  }
+  .intro,
+  .main-content {
+    width: 50%;
+    min-height: 100vh;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
